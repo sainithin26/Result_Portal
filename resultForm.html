@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://hcaptcha.com/1/api.js" async defer></script> 
+    <title>JNTUACEK Results</title>
+    <link rel="stylesheet" href="./resultForm.css">
+</head>
+<body>
+
+    <div class="container-head">
+        <div class="grid-container">
+           
+        <span class="logo"><img class='logo-size' src="./src/logo11.png" alt="no image"></img></span>
+        </div>
+        
+    </div>
+
+        <div class="results">
+            <div class="regulation">Title : B.Pharmacy IV Year I Semester (R19) Regular/Supplementary Examinations, November/December 2023</div>
+           
+        <div class="roll-form">
+            <form method="post" action="verify.php" class="middle">
+                <div class="roll">
+                <label for="rollno" class="get-down"><b> Enter Roll Number : </b></label>
+                <input type="text" name="rollno" id="rollno" class="Published-box roll-box" placeholder="Hallticket Number" required>
+            </div>
+                <!-- <div class="h-captcha" data-sitekey="61f716be-5e95-4a6c-9618-c4aab1be4d31" name="h-captcha-response"></div> -->
+                <div class="submit">
+                    <button type="submit">
+                        View Result
+                    </button>
+                </div>
+            
+            </form>
+            <hr>
+            </div>
+        </div>  
+</body>
+</html>

@@ -1,0 +1,200 @@
+.grid-container{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:2vh 2vh;
+    max-height: 40vh;
+    background-image: url('https://th.bing.com/th?id=OIP.tbH-68d16nkZ8YNDYH0A9gHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2');
+    background-blend-mode: multiply;
+    background-size: cover;
+    border:1px solid dodgerblue; 
+
+}
+
+.container-head{
+    margin: 0px;
+    min-width: 100vw;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.navbar{
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding-left: 14vw;
+}
+.navbar .container{
+    padding-left: 11vw;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+} 
+.logo{
+    grid-area: logo;
+    animation: slide-left 1s ease-in-out;
+}
+
+.name{
+    grid-area: name;
+    color: #dd1274;
+    font-size: calc(1.7vw + 2px);
+    font-family: sans-serif;
+    animation: slide-left 1s ease-in-out;
+    text-transform: uppercase;
+}
+.name1{
+    grid-area: name1;
+    color: #dd1274;
+    font-size: calc(1.0vw + 2px);
+    font-family: sans-serif;
+    animation: slide-left 1s ease-in-out;
+    font-weight: bold;
+}
+.name2{
+    grid-area: name2;
+    color: #dd1274;
+    font-size: calc(0.8vw + 2px);
+    font-family: sans-serif;
+    animation: slide-left 1s ease-in-out;
+}
+.name3{
+    grid-area: name3;
+    color: #dd1274  ;
+    font-size: calc(1.0vw + 2px);
+    font-weight: bold;
+    font-family: sans-serif;
+    animation: slide-left 1s ease-in-out;
+}
+.navbar-expand-lg{
+    margin-top: 0%;
+    padding-top: 0px;
+}
+.cen{
+    text-align: center;
+}
+.nav-item{
+    margin:0 2vw;
+}
+.nav-link{
+    color: #111827;
+    text-shadow: 0px 0px 1px rgb(0, 0, 0);
+    animation: slide-in 1s ease-in-out;
+} 
+.logo-size{
+    width:30vw;
+}
+#image{
+    animation: slow-show 20s ease-in-out infinite;
+}
+.nav-item span{
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, cyan, dodgerblue );
+    border-radius: 5px;
+    visibility: hidden;
+}
+.nav-item:hover span{
+    visibility: visible;
+    animation: slide-in 0.5s ease-in-out;
+}
+.results{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    justify-content: center;
+    margin-top: 2vh;
+    flex-direction:column ;
+}
+.Published-box{
+    display: flex;
+    border-bottom: 1px solid dodgerblue;
+    padding: 1vh;
+}
+.roll-box{
+    margin: 1vh;
+    border: 1px solid rgb(155, 155, 155);
+    width:15vw;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.roll-box:focus{
+    border:1px solid dodgerblue;
+    outline: none;
+}
+.regulation{
+    border: 1px solid dodgerblue;
+    width:90vw;
+    padding: 2vh;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: dodgerblue;
+    text-align: center;
+    background-color: azure;
+    margin: 3.5vh 0;
+}
+.roll-form{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 90vw;
+    padding: 3vh;
+    background-color: azure;
+}
+.middle, .roll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.middle{
+    flex-direction: column;
+}
+.roll{
+    flex-direction: row;
+}
+.h-captcha{
+    margin: 3vh 0;
+}
+.submit button{
+    background-color: dodgerblue;
+    border: 1px solid rgb(30, 176, 255);
+    padding: 1vh 2vh;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 3vh;
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+@keyframes moveBackground {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 0 100%; /* Adjust to 100% to move the image horizontally */
+            }
+        }
+@keyframes slide-left {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+@keyframes slow-show {
+    0%{
+        transform: translateY(-50%);
+    }
+    50%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-50%);
+    }
+}
