@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="results.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel='stylesheet' href='https://fonts.googlesapis.com/css2?family=Montserrat:wght@800&amp;display=swap'>
+    <title>Results View</title>
+</head>
+<body>
+    <div class="container-head">
+        <div class="grid-container">
+        <span class="logo"><img class='logo-size' src="./logo11.png" alt="no image"></img></span>
+        </div>
+    </div>
+    <div class="resultView middle">
+        <div class="roll" style="justify-content:space-evenly;">
+            <div class="regulation1">Title : B.Tech IV Year I Semester (R20) Regular/Supplementary Examinations, November/December 2023</div>
+        </div>
+        <div class="roll2"><b>Roll NO :</b> <%= rollno %> <br></div>
+        <div class="resultsTable">
+            <table>
+                <thead>
+                    <tr>
+                        <th>S no</th>
+                        <th>Subject Code</th>
+                        <th>Subject Name</th>
+                        <th>Internal Marks</th>
+                        <th>External Marks</th>
+                        <th>Total Marks</th>
+                        <th>Grade</th>
+                        <th>Credits</th>
+                        <th>Pass/Fail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% var i=1 %>
+                        <% results.forEach(function(result) { %>
+                            <tr>
+                                <td><%= i++ %></td>
+                            <td><%= result.subject_code %></td>
+                            <td><%= result.subject_name %></td>
+                            <td><%= result.internal_marks %></td>
+                            <td><%= result.external_marks %></td>
+                            <td><%= result.total_marks %></td>
+                            <td><%= result.grade %></td>
+                            <td><%= result.credits %></td>
+                            <td><%= result.pass_or_fail %></td>
+                      </tr><%}); %>
+                    <tr class="OverallResults">
+                        <td colspan="5" class="OverallResults">
+                            Overall Result
+                        </td>
+                        <td class="OverallResults">
+                            810/1000
+                        </td>
+                        <td class="OverallResults">
+                            A
+                        </td>
+                        <td class="OverallResults"></td>
+                        <td class="OverallResults">
+                            P
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

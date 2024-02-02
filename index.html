@@ -12,7 +12,7 @@
     <div class="container header-part mt-2">
         <div class="row">
             <div class="col-sm-4">
-                <img src="./src/logo.png" alt="College Logo" width="180" height="180">
+                <img src="./logo.png" alt="College Logo" width="180" height="180">
             </div>
             <div class="col-sm-8">
                 <div class="mt-5 mdiv">
@@ -54,17 +54,43 @@
                 <p>1</p>
             </div>
             <div class="odd_link">
-                <a href="./resultForm.html">I B.Tech I Semester (R20) Regular Examinations Results September, 2023. </a>
+                <%
+                function toRoman(num) {
+                    const romanNumeralMap = {
+                        1: 'I',
+                        2: 'II',
+                        3: 'III',
+                        4: 'IV'
+                        // Add more mappings as needed
+                    };
+                
+                    return romanNumeralMap[num];
+                }
+                function regSep(num){
+                    const rs = {
+                        1 : "Regular",
+                        0 : "Supplementary"
+                    };
+                    return rs[num];
+                }
+                %>
+                    <% regulations.forEach(function(regulation1) { %>
+                        <!-- Use EJS tags to output dynamic content -->
+                        <a href="form?id=<%= regulation1.id %>">
+                            B.Tech <%= toRoman(regulation1.academic_year) %> Year <%= toRoman(regulation1.academic_sem) %> Semester (<%= regulation1.regulation %>) <%= regSep(regulation1.reg_or_sup) %> Examinations, <%= regulation1.exam_month %> <%= regulation1.results_date.getFullYear() %> 
+                        </a>    
+                        <br> <!-- Add line break for better readability -->
+                    <% }); %>
             </div>   
         </div>
-        <div class="even">
+        <!-- <div class="even">
             <div class="even_num">
                 <p>2</p>
             </div>
             <div class="even_link">
                 <a href="./resultForm.html">I B.Tech II Semester (R20) Regular Examinations Results March, 2024. </a>
             </div>   
-        </div>
+        </div> -->
     </div>
 </body>
 </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Montserrat:wght@800&amp;display=swap'>
+    <script src='https://unpkg.com/sweetalert/dist/sweetalert.min.js'></script>
+    <link rel="stylesheet" href="results.css">
+  <title>Results:  Enter Roll Number</title> 
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container-head">
+        <div class="grid-container">
+        <span class="logo"><img class='logo-size' src="logo11.png" alt="no image"></img></span>
+        </div>
+    </div>
+        <div class="results">
+            <div class="regulation">Title : B.Pharmacy IV Year I Semester (R20) Regular/Supplementary Examinations, November/December 2023</div>
+           
+        <div class="roll-form login-form">
+            <form action="/submit?id=<%=id%>" method="post" class="middle">
+                <div class="roll">
+                    <label for="rollno" class="get-down"><b> Enter Roll Number : </b></label>
+                    <input type="text" name="rollno" id="rollno" class="Published-box roll-box" placeholder="Hallticket Number" required>
+                </div> 
+                <div class="captcha">
+                    <div class="preview"></div>
+                    <div class="captcha-form">
+                      <input type="text" id="captcha-form" placeholder="Enter captcha text">
+                      <button class="captcha-refresh" onClick="(e)=>e.preventDefault()">
+                        <i class="fa fa-refresh"></i>
+                      </button>
+                    </div>
+                  </div>
+                <div class="submit form-input">
+                    <button type="submit" id="login-btn" class='cyan-hover'>
+                        View Result
+                    </button>
+                </div>
+            
+            </form>
+            </div>
+        </div>  
+<script src="./script.js"></script>
+
+</body>
+</html>

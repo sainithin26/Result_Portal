@@ -1,0 +1,292 @@
+html{
+    padding: 0%;
+    margin: 0%;
+}
+.grid-container{
+display: flex;
+align-items: center;
+justify-content: center;
+padding:2vh 2vh;
+max-height: 40vh;
+background:linear-gradient(40deg,dodgerblue,  cyan,midnightblue);
+background-blend-mode: multiply;
+background-size: cover;
+min-width: 100vw;
+margin: 0%;
+border:1px solid dodgerblue; 
+}
+.container-head{
+margin: 0px;
+min-width: 100vw;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.logo{
+grid-area: logo;
+animation: slide-down 1s ease-in-out;
+}
+.cen{
+text-align: center;
+}
+.logo-size{
+height:calc(7vh + 6vw);
+}
+#image{
+animation: slow-show 20s ease-in-out infinite;
+} 
+.results{
+display: flex;
+align-items: center;
+width: 100vw;
+justify-content: center;
+margin-top: 2vh;
+flex-direction:column ;
+}
+.Published-box{
+display: flex;
+border-bottom: 1px solid dodgerblue;
+padding: 1vh;
+}
+.roll-box{
+margin: 1vh;
+border: 1px solid rgb(155, 155, 155);
+width:15vw;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.roll-box:focus,  #captcha-form:focus{
+border-bottom:4px solid dodgerblue;
+outline: none;
+}
+.regulation, .regulation1{
+border: 1px solid dodgerblue;
+padding: 2vh;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+color: dodgerblue;
+text-align: center;
+background-color: azure;
+}
+.regulation{
+width:90vw;
+margin: 3.5vh 0;
+}
+.regulation1{
+width:80vw;
+margin: 1.5vh 0;
+}
+.roll-form{
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+width: 90vw;
+padding: 3vh;
+}
+.middle, .roll{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.middle{
+flex-direction: column;
+padding: 3vh;
+}
+.roll{
+flex-direction: row;
+}
+.h-captcha{
+margin: 3vh 0;
+}
+.submit button{    
+background:dodgerblue;
+border: 1px solid rgb(30, 176, 255);
+padding: 1vh 2vh;
+color: white;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+border-radius: 3vh;
+}
+.resultsTable{
+    max-width: 100vw;
+    padding: 0%;
+    margin-left: 2vw;
+    overflow-x: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.resultsTable table{
+    padding: 0vh;
+    border-collapse: collapse;
+    border-spacing: 0;
+    max-width: 100vw;
+    margin: 1vh;
+}
+.resultsTable table th, .resultsTable table td{
+    padding:1vh .7vh;
+    text-align: center;
+    border: 1px outset #d6eeeeaa;
+    text-overflow: ellipsis;
+}
+.resultsTable table tr:nth-child(even){
+    background-color: #d6eeeeaa;
+}
+.resultsTable table th{
+    color: dodgerblue;
+}
+.roll2{
+    margin-bottom: 2vh;
+}
+.roll1 b, .roll2 b{
+    color: dodgerblue;
+}
+.OverallResults{
+   background-color:#0f0;color: white;
+}
+.roll-form .captcha {
+    margin: 15px 0px;
+    background: #fff;
+  }
+  .roll-form .captcha .preview {
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    height: 4vh;
+    line-height: 4vh;
+    letter-spacing: 2vh;
+    font-family: "monospace";
+  }
+  .roll-form .captcha .preview span {
+    display: inline-block;
+    user-select: none;
+  }
+  .roll-form .captcha .captcha-form {
+    display: flex;
+  }
+  .roll-form .captcha .captcha-form input {
+    padding: 8px;
+    border: 1px solid #888;
+  }
+  .roll-form .captcha .captcha-form .captcha-refresh {
+    width: 20%;
+    border: 1px solid #aaa;
+    border-left: none;
+    outline: none;    
+    background:white;
+    color: #aaa;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  }
+  .login-form{
+    padding: 0%;
+    margin: 0%;
+  }
+  #captcha-form{
+    width: 270px;
+    height: 4vh;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 1px solid #aaa;
+  }
+  .width-setter1{
+    width: 90vw;
+    padding: 2vh;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .preview{
+    background:linear-gradient(40deg,dodgerblue, cyan, midnightblue);
+  }
+  .captcha-refresh{
+    border: 1px solid #aaa;
+  }
+  .captcha{
+    margin: 3vh 0vh;
+  }
+  .cyan-hover:hover{
+    box-shadow: cyan 2px 2px 20px;
+    transition: 0.5s;
+  }
+  #login-btn{
+    padding: 1.5vh 2vh;
+  }
+@keyframes slide-in {
+0% {
+opacity: 0;
+transform: translateX(-100%);
+}
+100% {
+opacity: 1;
+transform: translateX(0);
+}
+
+}
+@keyframes moveBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 100%; /* Adjust to 100% to move the image horizontally */
+    }
+}
+@keyframes bg-clr {
+    0%{
+    background:linear-gradient(40deg, violet, indigo, cyan, dodgerblue, blue, #0f0, green, yellow, orange, red);
+    }
+    10%{
+    background:linear-gradient(40deg,  indigo, cyan, dodgerblue, blue, #0f0, green, yellow, orange, red, violet);
+    }
+    20%{
+        background:linear-gradient(40deg, blue, cyan, dodgerblue, #0f0, green, yellow, orange, red, violet, indigo); 
+    }
+    30%{
+        background:linear-gradient(40deg, cyan, dodgerblue, #0f0, green, yellow, orange, red, violet, indigo, blue); 
+    }
+    40%{
+        background:linear-gradient(40deg, dodgerblue, #0f0, green, yellow, orange, red, violet, indigo, blue, cyan); 
+    }
+    50%{
+        background:linear-gradient(40deg, #0f0, green, yellow, orange, red, violet, indigo, blue, cyan, dodgerblue); 
+    }
+    60%{
+        background:linear-gradient(40deg, green, yellow, orange, red, violet, indigo, blue, cyan, dodgerblue, #0f0); 
+    }
+    70%{
+        background:linear-gradient(40deg, yellow, orange, red, violet, indigo, blue, cyan, dodgerblue, #0f0, green); 
+    }
+    80%{
+        background:linear-gradient(40deg, orange, red, violet, indigo, blue, cyan, dodgerblue, #0f0, green, yellow); 
+    }
+    90%{
+        background:linear-gradient(40deg, red, violet, indigo, blue, cyan, dodgerblue, #0f0, green, yellow, orange); 
+    }
+    100%{
+        background:linear-gradient(40deg, violet, indigo, blue, cyan, dodgerblue, #0f0, green, yellow, orange, red); 
+    }
+
+}
+@keyframes slide-down {
+0% {
+opacity: 0;
+transform: translateY(-100%);
+}
+100% {
+opacity: 1;
+transform: translateX(0);
+}
+
+}
+@keyframes slow-show {
+0%{
+transform: translateY(-50%);
+}
+50%{
+transform: translateY(0%);
+}
+100%{
+transform: translateY(-50%);
+}
+}  
+@keyframes sliding {
+0%{
+transform: translateX(-100%);
+}
+50%{
+transform: translateX(50%);
+}
+100%{
+transform: translateX(-100%);
+}
+} 
